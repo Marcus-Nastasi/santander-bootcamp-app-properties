@@ -1,20 +1,23 @@
 package com.santander.AppPropertries.Domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class EmailSystem {
 
-    @Value("${name:No-Reply}")
+    @Value("${name:noreply}")
     private String name;
-    @Value("${email:noreply@gmail.com}")
-    private String email;
+    @Autowired
+    private Email email;
 
     public String getName() {
         return name;
     }
 
     public String getEmail() {
-        return email;
+        return email.getEmail();
     }
 }
 
