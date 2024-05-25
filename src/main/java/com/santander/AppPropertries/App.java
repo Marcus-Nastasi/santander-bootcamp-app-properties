@@ -14,7 +14,7 @@ public class App implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println(emailSystem.getName());
-        System.out.println(emailSystem.getEmail());
+        System.out.println(emailSystem.getEmailString());
     }
 }
 

@@ -9,6 +9,7 @@ public class EmailSystem {
 
     @Value("${name:noreply}")
     private String name;
+
     @Autowired
     private Email email;
 
@@ -16,7 +17,11 @@ public class EmailSystem {
         return name;
     }
 
-    public String getEmail() {
+    public Email getEmail() {
+        return email;
+    }
+
+    public String getEmailString() {
         return email.getEmail();
     }
 }
